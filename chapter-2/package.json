@@ -1,0 +1,17 @@
+{
+  "name": "chapter-2",
+  "version": "1.0.0",
+  "description": "learn js chapter2",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "underscore": "^1.13.6"
+  },
+  "devDependencies": {
+    "eslint": "^8.30.0"
+  }
+}
