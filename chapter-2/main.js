@@ -1,10 +1,10 @@
-'use strict';
+"use strict";
 
 function draw(n) {
-    if (n < 1 || n > 52) throw new Error('you must draw between 1 and 52 cards!');
+    if (n < 1 || n > 52) throw new Error("you must draw between 1 and 52 cards!");
     const deck = [];
-    for (let suite of ['\u2660', '\u2663', '\u2665', '\u2666']) {
-        for (let rank of 'A,2,3,4,5,6,7,8,9,10,J,Q,K'.split(',')) {
+    for (let suite of ["\u2660", "\u2663", "\u2665", "\u2666"]) {
+        for (let rank of "A,2,3,4,5,6,7,8,9,10,J,Q,K".split(",")) {
             deck.push(`${rank}${suite}`);
         }
     }
@@ -16,5 +16,5 @@ function draw(n) {
     return hand;
 }
 
-console.log('Your hand:');
+console.log("Your hand:");
 console.log(draw(6));

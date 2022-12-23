@@ -1,14 +1,14 @@
-'use strict';
-const _ = require('underscore');
+"use strict";
+const _ = require("underscore");
 
 const sentences = [
-    { subject: 'JavaScript', verb: 'is', object: 'great' },
-    { subject: 'Elephants', verb: 'are', object: 'large' },
+    { subject: "JavaScript", verb: "is", object: "great" },
+    { subject: "Elephants", verb: "are", object: "large" },
 ];
 
-const verbs = _.pluck(sentences, 'verb');
+const verbs = _.pluck(sentences, "verb");
 
-console.log('-----------------------');
+console.log("-----------------------");
 
 /**
  * Outputs sentences to the console
@@ -25,7 +25,7 @@ for (const a of sentences) {
     say(a);
 }
 
-console.log('\n-----------------------');
+console.log("\n-----------------------");
 
 for (const verb of verbs) {
     console.log(`found verb: ${verb} `);
