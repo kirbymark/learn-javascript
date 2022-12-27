@@ -2,7 +2,7 @@
 const prompt = require("prompt-sync")();
 
 const suites = [
-    { "name": "crown", "image": "\u265B"},  // u2655
+    { "name": "crown", "image": "\u265B"}, 
     { "name": "anchor", "image": "\u2693"},
     { "name": "spade", "image": "\u2660"},
     { "name": "club", "image": "\u2663"},
@@ -101,10 +101,10 @@ while (game[game.length - 1].funds > 0 && game[game.length - 1].funds < 99 ) {
     
     const thisRoll = rollDice();
     console.log(`The roll is ${thisRoll}`);
-    
-    let newFunds = parseInt(thisBet.remainFunds) + parseInt(collectWinnings(thisBet,thisRoll));
+    let win = parseInt(collectWinnings(thisBet,thisRoll));
+    let newFunds = parseInt(thisBet.remainFunds) + parseInt(win);
 
-    let turn = {"turn": `${parseInt(game[game.length - 1].turn) + 1}`, "funds": `${parseInt(newFunds)}` }
+    let turn = {"turn": `${parseInt(game[game.length - 1].turn) + 1}`, "funds": `${parseInt(newFunds)}`, "bet":`${JSON.stringify(thisBet)}`, "roll":`${thisRoll}`,"winnings":parseInt(win)}
     game.push(turn);
 
 
